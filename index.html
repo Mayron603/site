@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pra ela</title>
+
+<style type="text/css">
+@font-face {
+    font-family: digit;
+    src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+    <div id="content">
+        <div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">12-11-2024,</span><br />
+			<span class="space"/><span class="comments"></span><br />
+			<span class="comments">Oi meu bem, como você está?</span><br />
+			Estou escrevendo isso porque senti no coração fazer algo especial para você.<br />
+			<span class="comments">Desde o primeiro momento em que conversamos, senti algo que não consigo explicar completamente.</span><br />
+			Algo que me fez querer estar mais perto de você.<br />
+			<span class="comments">Não sei se estou certo ou se isso pode não ser recíproco,</span><br />
+			mas quero que saiba que vou estar ao seu lado sempre que precisar.<br />
+			Eu estarei aqui, pronto para ouvir, apoiar e compartilhar os momentos bons.<br />
+			<span class="comments">Quero que este texto seja um lembrete do quanto você é especial.</span><br />
+			Se algum dia você precisar de alguém para escutar ou dividir um momento, saiba que estarei aqui.<br />
+			<br />			
+            <br>
+        </div>
+        <div id="loveHeart">
+            <canvas id="garden"></canvas>
+            <div id="words">
+                <div id="messages">
+                    <div id=></div>
+                </div>
+                <div id="loveu">
+                    Quero ficar sempre ao seu lado. <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Seu navegador não suporta HTML5!<br/>Recomenda-se usar Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
+
+    timeElapse(together);
+    setInterval(function () {
+        timeElapse(together);
+    }, 500);
+
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script>
+</body>
+</html>
